@@ -88,6 +88,8 @@
     - aktifkan ssl dengan command
     sudo ln -s /etc/nginx/sites-available/payment-services.msglow.today /etc/nginx/sites-enabled/
 
+    sudo ln -s /etc/nginx/sites-available/ims-services.msglow.app /etc/nginx/sites-enabled/
+
 6. Langkah keenam
     - test dan reload nginx:
     - sudo nginx -t
