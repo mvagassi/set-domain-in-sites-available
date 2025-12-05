@@ -79,7 +79,7 @@ UNTUK BUILD DOCKER :
 docker run -d --log-driver gelf --log-opt gelf-address=udp://180.131.130.6:5044 --restart always --name fastapi-payment -p 8085:8010 -v /opt/docker/fastapi-payment/config.py:/app/core/config.py -v /opt/docker/fastapi-payment/config_community_men.py:/app/core/config_community_men.py -v /opt/docker/fastapi-payment/supervisord.conf:/etc/supervisord.conf -e TZ=Asia/Jakarta registry.msglow.cloud/services/xendit-payment-service/fastapi-payment:<version>
 
 - run docker service ims
-docker run -d --log-driver gelf --log-opt gelf-address=udp://180.131.130.6:5044 --restart always --name fastapi-erp -p 8081:8007 -v /opt/docker/fastapi-erp/config.py:/app/core/config.py -v /opt/docker/fastapi-erp/supervisord.conf:/etc/supervisord.conf -v /opt/docker/fastapi-erp/report:/app/static/reports -v /opt/docker/fastapi-erp/uploads/product_images -v /opt/docker/fastapi-erp/uploads/product_certificates -e TZ=Asia/Jakarta registry.msglow.cloud/services/service-ims/fastapi-erp:<verison>
+docker run -d --log-driver gelf --log-opt gelf-address=udp://180.131.130.6:5044 --restart always --name fastapi-erp -p 8081:8007 -v /opt/docker/fastapi-erp/config.py:/app/core/config.py -v /opt/docker/fastapi-erp/supervisord.conf:/etc/supervisord.conf -v /opt/docker/fastapi-erp/report:/app/static/reports -v /opt/docker/fastapi-erp/uploads/product_images:/app/static/uploads/product_images -v /opt/docker/fastapi-erp/uploads/product_certificates:/app/static/uploads/product_certificates -e TZ=Asia/Jakarta registry.msglow.cloud/services/service-ims/fastapi-erp:<verison>
 
 - untuk melihat list service docker yang sedang berjalan : docker ps -a
 - untuk melihat list image docker : docker images
